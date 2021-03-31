@@ -2,26 +2,57 @@ import java.util.Scanner;
 
 public class homework 
 {
-	
-	public static void main(String[] homeworkTest)
-	{
+	public static void main(String args[])
 
-		long number = 200739;
+    {
 
-        int val = 90;
+        square sq = new square(6);
 
-        while (number > 0)
+        square copy = sq;
 
-        {
+        sq = sq.adjustSquare(3);
 
-              int temp = (int)number % 100;
+        System.out.print(copy.getArea() + " ");
 
-              val %= temp;
+        System.out.println(sq.getArea());
 
-              number /= 100;
+    }
 
-        }
-
-        System.out.println(val);
-	}
 }
+
+class square
+
+{
+
+     private int length;
+
+     square(int a)
+
+     {
+
+          length = a;
+
+     }
+
+     public int getArea()
+
+     {
+
+          return length * length;
+
+     }
+
+     public square adjustSquare(int i)
+
+     {
+
+          return new square(length+i);
+
+     }
+
+}
+
+	 
+	 
+
+
