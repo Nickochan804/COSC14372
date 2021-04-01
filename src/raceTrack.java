@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class raceTrack 
 {
 	
-	
+	// Nicholas Lamb
 	public static void main(String[] args) 
 	{		
 		//car 1
